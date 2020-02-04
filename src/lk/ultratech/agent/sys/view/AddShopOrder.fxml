@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.AddShopOrderController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="lblId" alignment="CENTER_RIGHT" layoutX="445.0" layoutY="9.0" prefHeight="24.0" prefWidth="280.0" text="SHOP ORDER ID : SO001">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="543.0" layoutY="40.0" prefHeight="24.0" prefWidth="183.0" text="2019-10-05">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtShopId" labelFloat="true" layoutX="345.0" layoutY="38.0" prefHeight="28.0" prefWidth="101.0" promptText="Shop ID :" />
+            <JFXTextField fx:id="txtShopAddress" labelFloat="true" layoutX="345.0" layoutY="101.0" prefHeight="28.0" prefWidth="227.0" promptText="Address :" />
+            <JFXComboBox fx:id="cmbCementType" labelFloat="true" layoutX="44.0" layoutY="101.0" prefHeight="28.0" prefWidth="161.0" promptText="Cement Type :" />
+            <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="44.0" layoutY="240.0" prefHeight="28.0" prefWidth="161.0" promptText="Unit Price" />
+            <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="44.0" layoutY="311.0" prefHeight="28.0" prefWidth="161.0" promptText="Qty." />
+            <Label fx:id="lblTotal" layoutX="343.0" layoutY="305.0" text="TOTAL : 0.00">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="dateDueDate" layoutX="44.0" layoutY="168.0" promptText="Due Date" />
+            <Separator layoutX="301.0" layoutY="14.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="17.0" />
+            <JFXComboBox fx:id="cmbShopName" labelFloat="true" layoutX="44.0" layoutY="38.0" prefHeight="28.0" prefWidth="227.0" promptText="Shop Name :" />
+            <JFXButton id="btnSave" fx:id="btnPlaceShopOrder" layoutX="543.0" layoutY="406.0" onAction="#placeShopOrder" prefHeight="35.0" prefWidth="147.0" style="-fx-cursor: hand; -fx-background-color: green; -fx-text-fill: white;" text="Place Shop Order" textFill="WHITE" />
+            <JFXTextField fx:id="txtShopTelephone" labelFloat="true" layoutX="345.0" layoutY="169.0" prefHeight="28.0" prefWidth="227.0" promptText="Telephone :" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

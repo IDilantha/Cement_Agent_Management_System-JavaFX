@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.MainformController">
+   <children>
+      <Pane fx:id="paneTop" prefHeight="120.0" prefWidth="950.0" style="-fx-background-color: #dfd892;">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="120.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/logo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLogout" fitHeight="26.0" fitWidth="24.0" layoutX="921.0" layoutY="5.0" onMouseClicked="#logout" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/logout.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIcon fx:id="iconSettings" iconName="COG" layoutX="922.0" layoutY="112.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnim" onMouseExited="#playMouseExitAnim" size="2em" />
+            <FontAwesomeIcon fx:id="iconHome" iconName="HOME" layoutX="218.0" layoutY="37.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnim" onMouseExited="#playMouseExitAnim" size="3em" />
+            <Label fx:id="lblTitle" layoutX="219.0" layoutY="78.0" prefHeight="39.0" prefWidth="450.0" text="Dashboard" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMainTitle" layoutX="309.0" layoutY="3.0" prefHeight="39.0" prefWidth="441.0" text="Dilantha Traders Pvt Ltd" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="734.0" layoutY="78.0" prefHeight="39.0" prefWidth="154.0" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="mainAnchorPane" layoutX="214.0" layoutY="120.0" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TableView fx:id="tblShopOrdersMain" focusTraversable="false" layoutX="5.0" layoutY="71.0" prefHeight="401.0" prefWidth="391.0">
+               <columns>
+                  <TableColumn fx:id="clmShopName" prefWidth="182.0" text="Shop Name" />
+                  <TableColumn fx:id="clmType" prefWidth="61.0" text="Type" />
+                  <TableColumn fx:id="clmQty" prefWidth="41.0" text="QTY" />
+                  <TableColumn fx:id="clmDDate" minWidth="0.0" prefWidth="103.0" text="Due Date" />
+               </columns>
+            </TableView>
+            <Label fx:id="lblMainPanelTitle" layoutX="115.0" layoutY="14.0" prefHeight="39.0" prefWidth="154.0" text="Shop Orders" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="401.0" layoutY="14.0" orientation="VERTICAL" prefHeight="460.0" prefWidth="2.0" />
+            <Separator layoutX="6.0" layoutY="14.0" prefHeight="2.0" prefWidth="378.0" />
+            <ImageView fx:id="imgShopPay" fitHeight="104.0" fitWidth="105.0" layoutX="440.0" layoutY="241.0" onMouseClicked="#navigatesByImg" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/pay.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblDate" layoutX="503.0" layoutY="53.0" prefHeight="39.0" prefWidth="154.0" text="2019-10-15" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblToday" layoutX="535.0" layoutY="14.0" prefHeight="39.0" prefWidth="78.0" text="Today" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="429.0" layoutY="104.0" prefHeight="3.0" prefWidth="279.0" />
+            <Separator layoutX="429.0" layoutY="14.0" prefHeight="3.0" prefWidth="279.0" />
+            <ImageView fx:id="imgShopOrder" fitHeight="104.0" fitWidth="105.0" layoutX="590.0" layoutY="245.0" onMouseClicked="#navigatesByImg" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/addOrder.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblSelected" alignment="CENTER" contentDisplay="CENTER" layoutX="470.0" layoutY="396.0" prefHeight="39.0" prefWidth="212.0" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblQuickNav" contentDisplay="CENTER" layoutX="492.0" layoutY="152.0" prefHeight="39.0" prefWidth="172.0" text="Quick Navigation" textOverrun="CLIP">
+               <font>
+                  <Font name="FontAwesome Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="120.0" prefHeight="480.0" prefWidth="213.0" style="-fx-background-color: #f4f392;">
+         <children>
+            <FontAwesomeIcon fx:id="iconSearch" iconName="SEARCH" layoutX="12.0" layoutY="32.0" onMouseClicked="#navigate" size="2em" />
+            <JFXTextField fx:id="textSearch" disable="true" focusTraversable="false" layoutX="44.0" layoutY="10.0" promptText="Search ..." />
+            <VBox fx:id="vBoxMain" layoutY="50.0" prefHeight="430.0" prefWidth="213.0">
+               <children>
+                  <VBox fx:id="vBoxPO" prefHeight="70.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnPO" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Purchase Order">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="cBoxPOSub" prefHeight="105.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnAddPO" onMouseClicked="#navigates" prefHeight="30.0" prefWidth="213.0" text="Add Purchase Order" />
+                              <JFXButton fx:id="btnViewPO" onMouseClicked="#navigates" prefHeight="30.0" prefWidth="213.0" text="View Purchase Order" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxShopOrder" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnShopOrder" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Shop Order">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="SHOPPING_CART" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxShopOrderSub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnAddShopOrder" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Shop Order" />
+                              <JFXButton fx:id="btnManageShopOrder" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Manage Shop Order" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxShop" layoutX="10.0" layoutY="116.0" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnShop" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Shop">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="BUILDING" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxShopSub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnShopActivity" layoutX="10.0" layoutY="36.0" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Shop Activities" />
+                              <JFXButton fx:id="btnAddShop" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Shop" />
+                              <JFXButton fx:id="btnManageShop" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Manage Shop" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxPayment" layoutX="10.0" layoutY="222.0" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnPayment" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Shop Payment">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="MONEY" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxPaymentSub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnAddPayment" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Payment" />
+                              <JFXButton fx:id="btnManagePayment" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Manage Payment" />
+                              <JFXButton fx:id="btnChequePayment" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Cheque Payments" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxDelivery" layoutX="10.0" layoutY="354.0" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnDelivery" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Delivery">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="TRUCK" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxDeliverySub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnAddDelivery" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Delivery" />
+                              <JFXButton fx:id="btnManageDelivery" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Manage Delivery" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxWorker" layoutX="10.0" layoutY="486.0" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnWorker" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Worker">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxWorkerSub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton fx:id="btnAddWorker" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Worker" />
+                              <JFXButton fx:id="btnAddWorkerPayment" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Add Payment" />
+                              <JFXButton fx:id="btnManageWorker" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="Manage Worker" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxReports" layoutX="10.0" layoutY="592.0" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <JFXButton fx:id="btnReports" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="212.0" text="Reports">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="LIST" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox fx:id="vBoxReportSub" prefHeight="51.0" prefWidth="213.0">
+                           <children>
+                              <JFXButton prefHeight="26.0" prefWidth="213.0" text="View Monthly Sales Report" />
+                              <JFXButton fx:id="btnDeliveryReports" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="View Delivery Reports" />
+                              <JFXButton fx:id="btnPurchaseOrderReports" onMouseClicked="#navigates" prefHeight="26.0" prefWidth="213.0" text="View Purchase Order Reports" />
+                              <JFXButton layoutX="10.0" layoutY="62.0" prefHeight="26.0" prefWidth="213.0" text="View Shop Reports" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

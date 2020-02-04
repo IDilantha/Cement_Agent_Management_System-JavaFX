@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.ChequePaymentController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblChequePay" layoutX="4.0" layoutY="72.0" prefHeight="386.0" prefWidth="727.0">
+               <columns>
+                  <TableColumn fx:id="clmShopId" prefWidth="66.0" text="Shop ID" />
+                  <TableColumn fx:id="clmShopName" minWidth="0.0" prefWidth="159.0" text="Shop Name" />
+                  <TableColumn fx:id="clmPayId" prefWidth="82.0" text="Pay ID" />
+                  <TableColumn fx:id="clmPayDate" prefWidth="98.0" text="Due Date" />
+                  <TableColumn fx:id="clmChequeNo" prefWidth="118.0" text="Cheque No" />
+                  <TableColumn fx:id="clmAmount" prefWidth="113.0" text="Amount" />
+                  <TableColumn fx:id="clmReturned" prefWidth="88.0" text="Returned" />
+               </columns>
+            </TableView>
+            <JFXComboBox fx:id="cmbReturned" labelFloat="true" layoutX="51.0" layoutY="25.0" prefHeight="28.0" prefWidth="161.0" promptText="Set Cheque Status :" />
+            <JFXButton id="btnSave" fx:id="btnUpdate" layoutX="622.0" layoutY="31.0" onAction="#updateCheque" prefHeight="28.0" prefWidth="74.0" style="-fx-cursor: hand; -fx-background-color: green;" text="Update" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

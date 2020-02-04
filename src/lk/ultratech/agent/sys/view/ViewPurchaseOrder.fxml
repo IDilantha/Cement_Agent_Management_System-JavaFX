@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.ViewPurchaseOrderController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblPO" focusTraversable="false" layoutX="6.0" layoutY="35.0" prefHeight="382.0" prefWidth="722.0">
+              <columns>
+                <TableColumn fx:id="clmPOID" prefWidth="91.0" text="POID" />
+                <TableColumn fx:id="clmODate" editable="false" prefWidth="121.0" text="Order Date" />
+                  <TableColumn fx:id="clmType" minWidth="0.0" prefWidth="67.0" text="Type" />
+                  <TableColumn fx:id="clmQty" minWidth="5.0" prefWidth="71.0" text="QTY" />
+                  <TableColumn fx:id="clmAmount" prefWidth="135.0" text="Amount" />
+                  <TableColumn fx:id="clmChequeNo" prefWidth="136.0" text="Cheque Number" />
+                  <TableColumn fx:id="clmDDate" prefWidth="95.0" text="Due Date" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

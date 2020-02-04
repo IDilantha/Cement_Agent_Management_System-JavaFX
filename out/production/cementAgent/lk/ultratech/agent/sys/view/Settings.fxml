@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.SettingsController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <TabPane layoutX="14.0" layoutY="14.0" prefHeight="445.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabSetCementPrices" text="Set Cement Prices">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="txtOPCUnitPrice" labelFloat="true" layoutX="152.0" layoutY="231.0" prefHeight="28.0" prefWidth="161.0" promptText="Unit Price" />
+                              <Label fx:id="lblOPC" alignment="CENTER_RIGHT" layoutX="150.0" layoutY="182.0" prefHeight="24.0" prefWidth="37.0" text="OPC">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtPPCUnitPrice" labelFloat="true" layoutX="399.0" layoutY="230.0" prefHeight="28.0" prefWidth="161.0" promptText="Unit Price" />
+                              <Label fx:id="lblPPC" alignment="CENTER_RIGHT" layoutX="398.0" layoutY="181.0" prefHeight="24.0" prefWidth="37.0" text="PPC">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblSetCement" alignment="CENTER_RIGHT" layoutX="221.0" layoutY="26.0" prefHeight="24.0" prefWidth="246.0" text="Set All Shop Cement Prices">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="btnUpdate" layoutX="275.0" layoutY="324.0" onAction="#btnUpdateAction" prefHeight="37.0" prefWidth="138.0" style="-fx-background-color: green;" text="Update Prices" textFill="WHITE" />
+                              <JFXComboBox fx:id="cmbPriceType" labelFloat="true" layoutX="284.0" layoutY="94.0" prefHeight="28.0" prefWidth="120.0" promptText="Price :" visibleRowCount="3" />
+                              <Separator layoutX="244.0" layoutY="62.0" prefWidth="200.0" />
+                              <Separator layoutX="340.0" layoutY="160.0" orientation="VERTICAL" prefHeight="140.0" prefWidth="8.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabBackupRestore" text="Backup Restore">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <FontAwesomeIcon fx:id="btnBackup" iconName="CLOUD_UPLOAD" layoutX="161.0" layoutY="186.0" onMouseClicked="#backupDB" size="10em" wrappingWidth="143.0" />
+                              <FontAwesomeIcon fx:id="btnRestore" iconName="CLOUD_DOWNLOAD" layoutX="410.0" layoutY="186.0" onMouseClicked="#restoreDB" size="10em" wrappingWidth="143.0" />
+                              <Label fx:id="lblBackup" layoutX="150.0" layoutY="218.0" onMouseClicked="#backupDB" prefHeight="50.0" prefWidth="170.0" text="Backup">
+                                 <font>
+                                    <Font size="41.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRestore" layoutX="397.0" layoutY="218.0" onMouseClicked="#restoreDB" prefHeight="50.0" prefWidth="170.0" text="Restore">
+                                 <font>
+                                    <Font size="41.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="349.0" layoutY="82.0" orientation="VERTICAL" prefHeight="200.0" />
+                              <JFXProgressBar fx:id="pgb" layoutX="249.0" layoutY="321.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

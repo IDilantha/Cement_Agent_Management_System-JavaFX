@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.ShopActivityController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblActivityDeliveryTM" layoutX="4.0" layoutY="100.0" prefHeight="320.0" prefWidth="368.0">
+               <columns>
+                  <TableColumn prefWidth="97.0" text="Date" />
+                  <TableColumn minWidth="0.0" prefWidth="60.0" text="DID" />
+                  <TableColumn prefWidth="63.0" text="Type" />
+                  <TableColumn prefWidth="53.0" text="QTY" />
+                  <TableColumn prefWidth="90.0" text="Amount" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtUnitPrice" editable="false" labelFloat="true" layoutX="421.0" layoutY="25.0" prefHeight="28.0" prefWidth="118.0" promptText="OPC Unit Price" />
+            <Label fx:id="lblTotal" layoutX="376.0" layoutY="426.0" text="BALANCE: 0.00">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtShopId" editable="false" labelFloat="true" layoutX="288.0" layoutY="25.0" prefHeight="28.0" prefWidth="101.0" promptText="Shop ID :" />
+            <JFXTextField fx:id="txtUnitPrice1" editable="false" labelFloat="true" layoutX="580.0" layoutY="25.0" prefHeight="28.0" prefWidth="118.0" promptText="PPC Unit Price" />
+            <Separator layoutX="4.0" layoutY="63.0" prefHeight="5.0" prefWidth="727.0" />
+            <TableView fx:id="tblActivityPayTM" layoutX="383.0" layoutY="100.0" prefHeight="320.0" prefWidth="344.0">
+               <columns>
+                  <TableColumn prefWidth="97.0" text="Date" />
+                  <TableColumn minWidth="0.0" prefWidth="60.0" text="PID" />
+                  <TableColumn prefWidth="74.0" text="Type" />
+                  <TableColumn minWidth="0.0" prefWidth="107.0" text="Amount" />
+               </columns>
+            </TableView>
+            <Label layoutX="139.0" layoutY="76.0" prefHeight="16.0" prefWidth="133.0" text="Shop Deliveries">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="497.0" layoutY="76.0" prefHeight="16.0" prefWidth="133.0" text="Shop Payments">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbShopName" labelFloat="true" layoutX="20.0" layoutY="26.0" prefHeight="28.0" prefWidth="227.0" promptText="Shop Name :" />
+   </children>
+</AnchorPane>

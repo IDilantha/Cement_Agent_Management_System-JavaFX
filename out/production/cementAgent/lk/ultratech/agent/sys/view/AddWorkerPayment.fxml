@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ultratech.agent.sys.controller.AddWorkerPaymentController">
+   <children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="735.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="lblId" alignment="CENTER_RIGHT" layoutX="479.0" layoutY="22.0" prefHeight="24.0" prefWidth="177.0" text="Payment ID :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtxWorkerType" labelFloat="true" layoutX="33.0" layoutY="135.0" prefHeight="28.0" prefWidth="217.0" promptText="Type : " />
+            <Separator layoutX="5.0" layoutY="56.0" prefHeight="15.0" prefWidth="735.0" />
+            <Separator layoutX="5.0" layoutY="235.0" prefHeight="15.0" prefWidth="735.0" />
+            <JFXComboBox fx:id="cmbWorkerName" labelFloat="true" layoutX="33.0" layoutY="81.0" prefHeight="28.0" prefWidth="217.0" promptText="Worker Name :" visibleRowCount="3" />
+            <TableView fx:id="tblWorkerPayment" editable="true" focusTraversable="false" layoutX="28.0" layoutY="269.0" prefHeight="204.0" prefWidth="679.0">
+               <columns>
+                  <TableColumn fx:id="clmWorkerPayDate" editable="false" prefWidth="143.0" text="Date" />
+                  <TableColumn fx:id="clmWorkerPayId" prefWidth="81.0" text="WPay ID" />
+                  <TableColumn fx:id="clmWorkerId" prefWidth="87.0" text="Worker ID" />
+                  <TableColumn fx:id="clmWorkerName" prefWidth="148.0" text="Name" />
+                  <TableColumn fx:id="clmWorkerType" prefWidth="110.0" text="Type" />
+                  <TableColumn fx:id="clmWorkerAmount" prefWidth="105.0" text="Amount" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtxWorkerAmount" labelFloat="true" layoutX="306.0" layoutY="136.0" prefHeight="28.0" prefWidth="217.0" promptText="Amount : " />
+            <JFXButton fx:id="btnSaveWorkerPayment" layoutX="551.0" layoutY="188.0" onAction="#btnSave" prefHeight="37.0" prefWidth="138.0" style="-fx-background-color: green;" text="Save" textFill="WHITE" />
+            <JFXTextField fx:id="txtxWorkerId" labelFloat="true" layoutX="306.0" layoutY="81.0" prefHeight="28.0" prefWidth="217.0" promptText="Worker ID : " />
+            <Label fx:id="lblDatetxt" alignment="CENTER_RIGHT" layoutX="140.0" layoutY="22.0" prefHeight="24.0" prefWidth="62.0" text="Date : ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtxWorkerPayId" labelFloat="true" layoutX="578.0" layoutY="81.0" prefHeight="28.0" prefWidth="138.0" promptText="Worker Payment ID : " />
+            <Label fx:id="lblWorkerPayId" alignment="CENTER_RIGHT" layoutX="652.0" layoutY="22.0" prefHeight="24.0" prefWidth="73.0" text="WP001">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="202.0" layoutY="22.0" prefHeight="24.0" prefWidth="198.0" text="2019/10/05">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
